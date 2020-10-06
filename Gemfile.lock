@@ -1,0 +1,37 @@
+PATH
+  remote: .
+  specs:
+    maxipago_api (0.1.0)
+      activesupport
+      httparty (= 0.15.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.2.4.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    concurrent-ruby (1.1.7)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
+    i18n (1.5.1)
+      concurrent-ruby (~> 1.0)
+    minitest (5.14.2)
+    multi_xml (0.6.0)
+    rake (10.5.0)
+    thread_safe (0.3.6)
+    tzinfo (1.2.7)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.17)
+  maxipago_api!
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.17.3
