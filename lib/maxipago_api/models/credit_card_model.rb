@@ -1,3 +1,4 @@
+require 'maxipago_api/requests/credit_card_request.rb'
 module MaxipagoApi
   class CreditCardModel
     attr_accessor :customer_id, :credit_card_number, :expiration_month, :expiration_year,
@@ -6,23 +7,23 @@ module MaxipagoApi
       :billing_email
     
       def initialize(options = {})
-        self.customer_id = params[:customer_id]
-        self.credit_card_number = params[:credit_card_number]
-        self.expiration_month = params[:expiration_month]
-        self.expiration_year = params[:expiration_year]
-        self.billing_name = params[:billing_name]
-        self.billing_address1 = params[:billing_address1]
-        self.billing_address2 = params[:billing_address2]
-        self.billing_city = params[:billing_city]
-        self.billing_state = params[:billing_state]
-        self.billing_zipcode = params[:billing_zipcode]
-        self.billing_country = params[:billing_country]
-        self.billing_phone = params[:billing_phone]
-        self.billing_email = params[:billing_email]
+        self.customer_id = options[:customer_id]
+        self.credit_card_number = options[:credit_card_number]
+        self.expiration_month = options[:expiration_month]
+        self.expiration_year = options[:expiration_year]
+        self.billing_name = options[:billing_name]
+        self.billing_address1 = options[:billing_address1]
+        self.billing_address2 = options[:billing_address2]
+        self.billing_city = options[:billing_city]
+        self.billing_state = options[:billing_state]
+        self.billing_zipcode = options[:billing_zipcode]
+        self.billing_country = options[:billing_country]
+        self.billing_phone = options[:billing_phone]
+        self.billing_email = options[:billing_email]
       end
 
     def save
-      MaxipagoApi::CreditCardRequest.new(self).save
+      MaxipagoApi::CreditCardRequest.save(self)
     end
 
     def to_object

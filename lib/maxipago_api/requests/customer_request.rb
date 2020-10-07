@@ -10,7 +10,7 @@ module MaxipagoApi
             'verification' => {merchantId: MaxipagoApi.store_id, merchantKey: MaxipagoApi.store_key}, 
             command: 'add-consumer', 
             request: customer.to_object
-          }.to_xml(root: 'api-request')
+          }.to_xml(root: 'api-request', skip_types: true)
         response = post(MaxipagoApi.api_register_endpoint, body: xml, headers: {'Content-Type' => 'text/plain'})
         Hash.from_xml(response.parsed_response)
       end
