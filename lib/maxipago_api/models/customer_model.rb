@@ -28,7 +28,8 @@ module MaxipagoApi
       MaxipagoApi::CustomerRequest.create(self)
     end
 
-    def find
+    def self.find(id)
+      MaxipagoApi::CustomerRequest.find(id)
     end
 
     def to_object
