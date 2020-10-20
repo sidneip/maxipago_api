@@ -42,7 +42,7 @@ module MaxipagoApi
         dob: self.sex,
         ssn: self.document,
         sex: self.sex
-    }
+    }.select{|k,v| v.present?}
     end
   end
 end

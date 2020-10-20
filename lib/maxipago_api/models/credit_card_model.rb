@@ -41,7 +41,7 @@ module MaxipagoApi
         billingCountry: self.billing_country,
         billingPhone: self.billing_phone,
         billingEmail: self.billing_email,
-      }
+      }.select{|k,v| v.present?}
     end
   end
 end

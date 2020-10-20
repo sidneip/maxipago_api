@@ -37,7 +37,7 @@ module MaxipagoApi
             chargeTotal: self.charge_total
           }
         }
-      }
+      }.select{|k,v| v.present?}
     end
   end
 end
