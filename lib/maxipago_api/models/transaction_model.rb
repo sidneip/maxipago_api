@@ -23,7 +23,6 @@ module MaxipagoApi
         sale: {
           processorID: self.processor_id,
           referenceNum: self.reference_number,
-          ipAddress: self.ip_address,
           transactionDetail: {
             payType: {
               onFile: {
